@@ -33,16 +33,16 @@ import (
 	"k8s.io/apimachinery/pkg/util/validation/field"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/percona/percona-postgresql-operator/internal/initialize"
-	"github.com/percona/percona-postgresql-operator/internal/logging"
-	"github.com/percona/percona-postgresql-operator/internal/naming"
-	"github.com/percona/percona-postgresql-operator/internal/pgaudit"
-	"github.com/percona/percona-postgresql-operator/internal/pgstatmonitor"
-	"github.com/percona/percona-postgresql-operator/internal/postgis"
-	"github.com/percona/percona-postgresql-operator/internal/postgres"
-	pgpassword "github.com/percona/percona-postgresql-operator/internal/postgres/password"
-	"github.com/percona/percona-postgresql-operator/internal/util"
-	"github.com/percona/percona-postgresql-operator/pkg/apis/postgres-operator.crunchydata.com/v1beta1"
+	"github.com/ssk199441/agora-postgresql-operator/internal/initialize"
+	"github.com/ssk199441/agora-postgresql-operator/internal/logging"
+	"github.com/ssk199441/agora-postgresql-operator/internal/naming"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pgaudit"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pgstatmonitor"
+	"github.com/ssk199441/agora-postgresql-operator/internal/postgis"
+	"github.com/ssk199441/agora-postgresql-operator/internal/postgres"
+	pgpassword "github.com/ssk199441/agora-postgresql-operator/internal/postgres/password"
+	"github.com/ssk199441/agora-postgresql-operator/internal/util"
+	"github.com/ssk199441/agora-postgresql-operator/pkg/apis/postgres-operator.crunchydata.com/v1beta1"
 )
 
 // generatePostgresUserSecret returns a Secret containing a password and

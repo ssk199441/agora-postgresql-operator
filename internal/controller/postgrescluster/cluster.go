@@ -25,11 +25,11 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"
 
-	"github.com/percona/percona-postgresql-operator/internal/naming"
-	"github.com/percona/percona-postgresql-operator/internal/patroni"
-	"github.com/percona/percona-postgresql-operator/internal/pki"
-	"github.com/percona/percona-postgresql-operator/internal/postgres"
-	"github.com/percona/percona-postgresql-operator/pkg/apis/postgres-operator.crunchydata.com/v1beta1"
+	"github.com/ssk199441/agora-postgresql-operator/internal/naming"
+	"github.com/ssk199441/agora-postgresql-operator/internal/patroni"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pki"
+	"github.com/ssk199441/agora-postgresql-operator/internal/postgres"
+	"github.com/ssk199441/agora-postgresql-operator/pkg/apis/postgres-operator.crunchydata.com/v1beta1"
 )
 
 // +kubebuilder:rbac:groups="",resources="configmaps",verbs={create,patch}

@@ -21,7 +21,7 @@ import (
 
 	"gotest.tools/v3/assert"
 
-	"github.com/percona/percona-postgresql-operator/internal/testing/cmp"
+	"github.com/ssk199441/agora-postgresql-operator/internal/testing/cmp"
 )
 
 func TestNewHBAs(t *testing.T) {

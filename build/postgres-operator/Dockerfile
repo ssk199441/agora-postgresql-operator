@@ -1,5 +1,5 @@
 FROM golang:1.20 AS go_builder
-WORKDIR /go/src/github.com/percona/percona-postgresql-operator
+WORKDIR /go/src/github.com/ssk199441/agora-postgresql-operator
 
 COPY . .
 RUN go mod download

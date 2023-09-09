@@ -24,7 +24,7 @@ import (
 
 	"gotest.tools/v3/assert"
 
-	"github.com/percona/percona-postgresql-operator/internal/postgres"
+	"github.com/ssk199441/agora-postgresql-operator/internal/postgres"
 )
 
 func TestEnableInPostgreSQL(t *testing.T) {

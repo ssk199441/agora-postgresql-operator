@@ -4,22 +4,22 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.10.0
   creationTimestamp: null
-  name: perconapgbackups.pgv2.percona.com
+  name: agorapgbackups.pgv2.agora.com
 spec:
-  group: pgv2.percona.com
+  group: pgv2.agora.com
   names:
     kind: PerconaPGBackup
     listKind: PerconaPGBackupList
-    plural: perconapgbackups
+    plural: agorapgbackups
     shortNames:
     - pg-backup
-    singular: perconapgbackup
+    singular: agorapgbackup
   scope: Namespaced
   versions:
   - name: v2
     schema:
       openAPIV3Schema:
-        description: PerconaPGBackup is the CRD that defines a Percona PostgreSQL
+        description: PerconaPGBackup is the CRD that defines a Agora PostgreSQL
           Backup
         properties:
           apiVersion:
@@ -78,16 +78,16 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.10.0
   creationTimestamp: null
-  name: perconapgclusters.pgv2.percona.com
+  name: agorapgclusters.pgv2.agora.com
 spec:
-  group: pgv2.percona.com
+  group: pgv2.agora.com
   names:
     kind: PerconaPGCluster
     listKind: PerconaPGClusterList
-    plural: perconapgclusters
+    plural: agorapgclusters
     shortNames:
     - pg
-    singular: perconapgcluster
+    singular: agorapgcluster
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
@@ -109,7 +109,7 @@ spec:
     name: v2
     schema:
       openAPIV3Schema:
-        description: PerconaPGCluster is the CRD that defines a Percona PG Cluster
+        description: PerconaPGCluster is the CRD that defines a Agora PG Cluster
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -13658,22 +13658,22 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.10.0
   creationTimestamp: null
-  name: perconapgrestores.pgv2.percona.com
+  name: agorapgrestores.pgv2.agora.com
 spec:
-  group: pgv2.percona.com
+  group: pgv2.agora.com
   names:
     kind: PerconaPGRestore
     listKind: PerconaPGRestoreList
-    plural: perconapgrestores
+    plural: agorapgrestores
     shortNames:
     - pg-restore
-    singular: perconapgrestore
+    singular: agorapgrestore
   scope: Namespaced
   versions:
   - name: v2
     schema:
       openAPIV3Schema:
-        description: PerconaPGRestore is the CRD that defines a Percona PostgreSQL
+        description: PerconaPGRestore is the CRD that defines a Agora PostgreSQL
           Restore
         properties:
           apiVersion:

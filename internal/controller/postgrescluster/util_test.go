@@ -28,8 +28,8 @@ import (
 	"k8s.io/apimachinery/pkg/api/resource"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	"github.com/percona/percona-postgresql-operator/internal/naming"
-	"github.com/percona/percona-postgresql-operator/internal/testing/cmp"
+	"github.com/ssk199441/agora-postgresql-operator/internal/naming"
+	"github.com/ssk199441/agora-postgresql-operator/internal/testing/cmp"
 )
 
 func TestSafeHash32(t *testing.T) {

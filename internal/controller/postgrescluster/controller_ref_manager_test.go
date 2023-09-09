@@ -27,8 +27,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/percona/percona-postgresql-operator/internal/naming"
-	"github.com/percona/percona-postgresql-operator/internal/testing/require"
+	"github.com/ssk199441/agora-postgresql-operator/internal/naming"
+	"github.com/ssk199441/agora-postgresql-operator/internal/testing/require"
 )
 
 func TestManageControllerRefs(t *testing.T) {

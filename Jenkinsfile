@@ -354,16 +354,16 @@ pipeline {
                      steps {
                          sh """
                              mkdir -p $WORKSPACE/src/github.com/percona
-                             ln -s $WORKSPACE $WORKSPACE/src/github.com/percona/percona-postgresql-operator
+                             ln -s $WORKSPACE $WORKSPACE/src/github.com/ssk199441/agora-postgresql-operator
                              sg docker -c "
                                  docker run \
                                      --rm \
-                                     -v $WORKSPACE/src/github.com/percona/percona-postgresql-operator:/go/src/github.com/percona/percona-postgresql-operator \
-                                     -w /go/src/github.com/percona/percona-postgresql-operator \
+                                     -v $WORKSPACE/src/github.com/ssk199441/agora-postgresql-operator:/go/src/github.com/ssk199441/agora-postgresql-operator \
+                                     -w /go/src/github.com/ssk199441/agora-postgresql-operator \
                                      -e GO111MODULE=on \
                                      golang:1.20 sh -c '
                                          go install github.com/google/go-licenses@latest;
-                                         /go/bin/go-licenses csv github.com/percona/percona-postgresql-operator/cmd/postgres-operator \
+                                         /go/bin/go-licenses csv github.com/ssk199441/agora-postgresql-operator/cmd/postgres-operator \
                                              | cut -d , -f 3 \
                                              | sort -u \
                                              > go-licenses-new || :
@@ -377,15 +377,15 @@ pipeline {
                      steps {
                          sh '''
                              mkdir -p $WORKSPACE/src/github.com/percona
-                             ln -s $WORKSPACE $WORKSPACE/src/github.com/percona/percona-postgresql-operator
+                             ln -s $WORKSPACE $WORKSPACE/src/github.com/ssk199441/agora-postgresql-operator
                              sg docker -c "
                                  docker run \
                                      --rm \
-                                     -v $WORKSPACE/src/github.com/percona/percona-postgresql-operator:/go/src/github.com/percona/percona-postgresql-operator \
-                                     -w /go/src/github.com/percona/percona-postgresql-operator \
+                                     -v $WORKSPACE/src/github.com/ssk199441/agora-postgresql-operator:/go/src/github.com/ssk199441/agora-postgresql-operator \
+                                     -w /go/src/github.com/ssk199441/agora-postgresql-operator \
                                      -e GO111MODULE=on \
                                      -e GOFLAGS='-buildvcs=false' \
-                                     golang:1.20 sh -c 'go build -v -o percona-postgresql-operator github.com/percona/percona-postgresql-operator/cmd/postgres-operator'
+                                     golang:1.20 sh -c 'go build -v -o percona-postgresql-operator github.com/ssk199441/agora-postgresql-operator/cmd/postgres-operator'
                              "
                          '''
 

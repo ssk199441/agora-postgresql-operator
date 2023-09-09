@@ -32,8 +32,8 @@ import (
 	"k8s.io/client-go/rest"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 
-	"github.com/percona/percona-postgresql-operator/internal/logging"
-	"github.com/percona/percona-postgresql-operator/internal/testing/cmp"
+	"github.com/ssk199441/agora-postgresql-operator/internal/logging"
+	"github.com/ssk199441/agora-postgresql-operator/internal/testing/cmp"
 )
 
 func init() {

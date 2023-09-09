@@ -4,22 +4,22 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.10.0
   creationTimestamp: null
-  name: perconapgbackups.pgv2.percona.com
+  name: agorapgbackups.pgv2.agora.com
 spec:
-  group: pgv2.percona.com
+  group: pgv2.agora.com
   names:
     kind: PerconaPGBackup
     listKind: PerconaPGBackupList
-    plural: perconapgbackups
+    plural: agorapgbackups
     shortNames:
     - pg-backup
-    singular: perconapgbackup
+    singular: agorapgbackup
   scope: Namespaced
   versions:
   - name: v2
     schema:
       openAPIV3Schema:
-        description: PerconaPGBackup is the CRD that defines a Percona PostgreSQL
+        description: PerconaPGBackup is the CRD that defines a Agora PostgreSQL
           Backup
         properties:
           apiVersion:
@@ -78,16 +78,16 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.10.0
   creationTimestamp: null
-  name: perconapgclusters.pgv2.percona.com
+  name: agorapgclusters.pgv2.agora.com
 spec:
-  group: pgv2.percona.com
+  group: pgv2.agora.com
   names:
     kind: PerconaPGCluster
     listKind: PerconaPGClusterList
-    plural: perconapgclusters
+    plural: agorapgclusters
     shortNames:
     - pg
-    singular: perconapgcluster
+    singular: agorapgcluster
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
@@ -109,7 +109,7 @@ spec:
     name: v2
     schema:
       openAPIV3Schema:
-        description: PerconaPGCluster is the CRD that defines a Percona PG Cluster
+        description: PerconaPGCluster is the CRD that defines a Agora PG Cluster
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -13658,22 +13658,22 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.10.0
   creationTimestamp: null
-  name: perconapgrestores.pgv2.percona.com
+  name: agorapgrestores.pgv2.agora.com
 spec:
-  group: pgv2.percona.com
+  group: pgv2.agora.com
   names:
     kind: PerconaPGRestore
     listKind: PerconaPGRestoreList
-    plural: perconapgrestores
+    plural: agorapgrestores
     shortNames:
     - pg-restore
-    singular: perconapgrestore
+    singular: agorapgrestore
   scope: Namespaced
   versions:
   - name: v2
     schema:
       openAPIV3Schema:
-        description: PerconaPGRestore is the CRD that defines a Percona PostgreSQL
+        description: PerconaPGRestore is the CRD that defines a Agora PostgreSQL
           Restore
         properties:
           apiVersion:
@@ -30101,12 +30101,12 @@ spec:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: percona-postgresql-operator
+  name: agora-postgresql-operator
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: percona-postgresql-operator
+  name: agora-postgresql-operator
 rules:
 - apiGroups:
   - ""
@@ -30194,27 +30194,27 @@ rules:
   - patch
   - watch
 - apiGroups:
-  - pgv2.percona.com
+  - pgv2.agora.com
   resources:
-  - perconapgbackups
-  - perconapgrestores
+  - agorapgbackups
+  - agorapgrestores
   verbs:
   - get
   - list
   - watch
 - apiGroups:
-  - pgv2.percona.com
+  - pgv2.agora.com
   resources:
-  - perconapgbackups/status
-  - perconapgclusters/status
-  - perconapgrestores/status
+  - agorapgbackups/status
+  - agorapgclusters/status
+  - agorapgrestores/status
   verbs:
   - patch
   - update
 - apiGroups:
-  - pgv2.percona.com
+  - pgv2.agora.com
   resources:
-  - perconapgclusters
+  - agorapgclusters
   verbs:
   - create
   - get
@@ -30282,14 +30282,14 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: service-account-percona-postgresql-operator
+  name: service-account-agora-postgresql-operator
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: percona-postgresql-operator
+  name: agora-postgresql-operator
 subjects:
 - kind: ServiceAccount
-  name: percona-postgresql-operator
+  name: agora-postgresql-operator
   namespace: pg-operator
 ---
 apiVersion: apps/v1
@@ -30297,30 +30297,30 @@ kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/component: operator
-    app.kubernetes.io/instance: percona-postgresql-operator
-    app.kubernetes.io/name: percona-postgresql-operator
-    app.kubernetes.io/part-of: percona-postgresql-operator
-    pgv2.percona.com/control-plane: postgres-operator
-  name: percona-postgresql-operator
+    app.kubernetes.io/instance: agora-postgresql-operator
+    app.kubernetes.io/name: agora-postgresql-operator
+    app.kubernetes.io/part-of: agora-postgresql-operator
+    pgv2.agora.com/control-plane: postgres-operator
+  name: agora-postgresql-operator
 spec:
   replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/component: operator
-      app.kubernetes.io/instance: percona-postgresql-operator
-      app.kubernetes.io/name: percona-postgresql-operator
-      app.kubernetes.io/part-of: percona-postgresql-operator
-      pgv2.percona.com/control-plane: postgres-operator
+      app.kubernetes.io/instance: agora-postgresql-operator
+      app.kubernetes.io/name: agora-postgresql-operator
+      app.kubernetes.io/part-of: agora-postgresql-operator
+      pgv2.agora.com/control-plane: postgres-operator
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app.kubernetes.io/component: operator
-        app.kubernetes.io/instance: percona-postgresql-operator
-        app.kubernetes.io/name: percona-postgresql-operator
-        app.kubernetes.io/part-of: percona-postgresql-operator
-        pgv2.percona.com/control-plane: postgres-operator
+        app.kubernetes.io/instance: agora-postgresql-operator
+        app.kubernetes.io/name: agora-postgresql-operator
+        app.kubernetes.io/part-of: agora-postgresql-operator
+        pgv2.agora.com/control-plane: postgres-operator
     spec:
       containers:
       - env:
@@ -30332,7 +30332,7 @@ spec:
           value: "true"
         - name: DISABLE_TELEMETRY
           value: "false"
-        image: percona/percona-postgresql-operator:2.2.0
+        image: agora/agora-postgresql-operator:2.2.0
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
@@ -30352,4 +30352,4 @@ spec:
             - ALL
           readOnlyRootFilesystem: true
           runAsNonRoot: true
-      serviceAccountName: percona-postgresql-operator
+      serviceAccountName: agora-postgresql-operator

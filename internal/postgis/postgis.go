@@ -19,8 +19,8 @@ import (
 	"context"
 	"strings"
 
-	"github.com/percona/percona-postgresql-operator/internal/logging"
-	"github.com/percona/percona-postgresql-operator/internal/postgres"
+	"github.com/ssk199441/agora-postgresql-operator/internal/logging"
+	"github.com/ssk199441/agora-postgresql-operator/internal/postgres"
 )
 
 // EnableInPostgreSQL installs triggers for the following extensions into every database:

@@ -23,7 +23,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/percona/percona-postgresql-operator/internal/logging"
+	"github.com/ssk199441/agora-postgresql-operator/internal/logging"
 )
 
 // API defines a general interface for interacting with the Patroni API.

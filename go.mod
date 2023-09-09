@@ -1,4 +1,4 @@
-module github.com/percona/percona-postgresql-operator
+module github.com/ssk199441/agora-postgresql-operator
 
 go 1.20
 

@@ -21,7 +21,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/percona/percona-postgresql-operator/internal/initialize"
+	"github.com/ssk199441/agora-postgresql-operator/internal/initialize"
 )
 
 const (

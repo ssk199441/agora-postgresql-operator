@@ -42,16 +42,16 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 
-	"github.com/percona/percona-postgresql-operator/internal/logging"
-	"github.com/percona/percona-postgresql-operator/internal/pgaudit"
-	"github.com/percona/percona-postgresql-operator/internal/pgbackrest"
-	"github.com/percona/percona-postgresql-operator/internal/pgbouncer"
-	"github.com/percona/percona-postgresql-operator/internal/pgmonitor"
-	"github.com/percona/percona-postgresql-operator/internal/pgstatmonitor"
-	"github.com/percona/percona-postgresql-operator/internal/pki"
-	"github.com/percona/percona-postgresql-operator/internal/pmm"
-	"github.com/percona/percona-postgresql-operator/internal/postgres"
-	"github.com/percona/percona-postgresql-operator/pkg/apis/postgres-operator.crunchydata.com/v1beta1"
+	"github.com/ssk199441/agora-postgresql-operator/internal/logging"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pgaudit"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pgbackrest"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pgbouncer"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pgmonitor"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pgstatmonitor"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pki"
+	"github.com/ssk199441/agora-postgresql-operator/internal/pmm"
+	"github.com/ssk199441/agora-postgresql-operator/internal/postgres"
+	"github.com/ssk199441/agora-postgresql-operator/pkg/apis/postgres-operator.crunchydata.com/v1beta1"
 )
 
 const (

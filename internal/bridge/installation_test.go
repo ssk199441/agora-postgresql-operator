@@ -29,8 +29,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/yaml"
 
-	"github.com/percona/percona-postgresql-operator/internal/controller/runtime"
-	"github.com/percona/percona-postgresql-operator/internal/testing/cmp"
+	"github.com/ssk199441/agora-postgresql-operator/internal/controller/runtime"
+	"github.com/ssk199441/agora-postgresql-operator/internal/testing/cmp"
 )
 
 func TestExtractSecretContract(t *testing.T) {

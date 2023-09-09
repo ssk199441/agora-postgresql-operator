@@ -7,7 +7,7 @@
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/percona/percona-postgresql-operator/2)
 ![GitHub tag (latest by SemVer)](https://img.shields.io/github/v/tag/percona/percona-postgresql-operator?include_prereleases&sort=semver)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/percona/percona-postgresql-operator)
-[![Go Report Card](https://goreportcard.com/badge/github.com/percona/percona-postgresql-operator)](https://goreportcard.com/report/github.com/percona/percona-postgresql-operator)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ssk199441/agora-postgresql-operator)](https://goreportcard.com/report/github.com/ssk199441/agora-postgresql-operator)
 
 ## Introduction
 

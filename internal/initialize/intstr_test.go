@@ -21,7 +21,7 @@ import (
 	"gotest.tools/v3/assert"
 	"k8s.io/apimachinery/pkg/util/intstr"
 
-	"github.com/percona/percona-postgresql-operator/internal/initialize"
+	"github.com/ssk199441/agora-postgresql-operator/internal/initialize"
 )
 
 func TestIntOrStringInt32(t *testing.T) {

@@ -20,7 +20,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/percona/percona-postgresql-operator/internal/logging"
+	"github.com/ssk199441/agora-postgresql-operator/internal/logging"
 )
 
 // CreateDatabasesInPostgreSQL calls exec to create databases that do not exist

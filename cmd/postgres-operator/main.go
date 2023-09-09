@@ -27,16 +27,16 @@ import (
 	cruntime "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 
-	"github.com/percona/percona-postgresql-operator/internal/controller/postgrescluster"
-	"github.com/percona/percona-postgresql-operator/internal/controller/runtime"
-	"github.com/percona/percona-postgresql-operator/internal/logging"
-	"github.com/percona/percona-postgresql-operator/internal/upgradecheck"
-	"github.com/percona/percona-postgresql-operator/internal/util"
-	perconaController "github.com/percona/percona-postgresql-operator/percona/controller"
-	"github.com/percona/percona-postgresql-operator/percona/controller/pgbackup"
-	"github.com/percona/percona-postgresql-operator/percona/controller/pgcluster"
-	"github.com/percona/percona-postgresql-operator/percona/controller/pgrestore"
-	v2 "github.com/percona/percona-postgresql-operator/pkg/apis/pgv2.percona.com/v2"
+	"github.com/ssk199441/agora-postgresql-operator/internal/controller/postgrescluster"
+	"github.com/ssk199441/agora-postgresql-operator/internal/controller/runtime"
+	"github.com/ssk199441/agora-postgresql-operator/internal/logging"
+	"github.com/ssk199441/agora-postgresql-operator/internal/upgradecheck"
+	"github.com/ssk199441/agora-postgresql-operator/internal/util"
+	perconaController "github.com/ssk199441/agora-postgresql-operator/percona/controller"
+	"github.com/ssk199441/agora-postgresql-operator/percona/controller/pgbackup"
+	"github.com/ssk199441/agora-postgresql-operator/percona/controller/pgcluster"
+	"github.com/ssk199441/agora-postgresql-operator/percona/controller/pgrestore"
+	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.percona.com/v2"
 )
 
 var versionString string

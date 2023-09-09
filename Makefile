@@ -1,9 +1,9 @@
 
 # Default values if not already set
-NAME ?= percona-postgresql-operator
+NAME ?= agora-postgresql-operator
 VERSION ?= $(shell git rev-parse --abbrev-ref HEAD | sed -e 's^/^-^g; s^[.]^-^g;' | tr '[:upper:]' '[:lower:]')
 ROOT_REPO ?= ${PWD}
-IMAGE_TAG_BASE ?= perconalab/$(NAME)
+IMAGE_TAG_BASE ?= ssk1994/$(NAME)
 IMAGE ?= $(IMAGE_TAG_BASE):$(VERSION)
 
 PGOROOT ?= $(CURDIR)

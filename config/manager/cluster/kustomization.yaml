@@ -4,5 +4,5 @@ resources:
 - ../default/
 images:
 - name: postgres-operator
-  newName: perconalab/agora-postgresql-operator
+  newName: ssk1994/agora-postgresql-operator
   newTag: main

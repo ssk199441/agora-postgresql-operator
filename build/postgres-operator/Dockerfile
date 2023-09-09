@@ -24,11 +24,11 @@ RUN ./bin/license_aggregator.sh ./cmd/...; \
 
 FROM registry.access.redhat.com/ubi9/ubi-minimal AS ubi9
 
-LABEL name="Percona Postgres Operator" \
-      vendor="Percona" \
-      summary="Percona Postgres Operator performs Postgres database creation, adjustment and maintenance inside Kubernetes cluster" \
-      description="Percona Postgres Operator simplifies and automates all essential actions for stable and continuous database operation during the whole database lifecycle" \
-      maintainer="Percona Development <info@percona.com>"
+LABEL name="Agora Postgres Operator" \
+      vendor="Agora" \
+      summary="Agora Postgres Operator performs Postgres database creation, adjustment and maintenance inside Kubernetes cluster" \
+      description="Agora Postgres Operator simplifies and automates all essential actions for stable and continuous database operation during the whole database lifecycle" \
+      maintainer="Agora Development <info@agora.com>"
 
 RUN microdnf update -y && microdnf clean all -y
 

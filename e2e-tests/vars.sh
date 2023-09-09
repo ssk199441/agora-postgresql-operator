@@ -10,7 +10,7 @@ export TEMP_DIR=$(mktemp -d)
 export GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 export VERSION=${VERSION:-$(echo "${GIT_BRANCH}" | sed -e 's^/^-^g; s^[.]^-^g;' | tr '[:upper:]' '[:lower:]')}
 
-export IMAGE_BASE=${IMAGE_BASE:-"perconalab/percona-postgresql-operator"}
+export IMAGE_BASE=${IMAGE_BASE:-"ssk199441/agora-postgresql-operator"}
 export IMAGE=${IMAGE:-"${IMAGE_BASE}:${VERSION}"}
 export PG_VER="${PG_VER:-15}"
 export IMAGE_PGBOUNCER=${IMAGE_PGBOUNCER:-"${IMAGE_BASE}:main-ppg$PG_VER-pgbouncer"}

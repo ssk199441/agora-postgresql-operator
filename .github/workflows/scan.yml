@@ -9,14 +9,14 @@ jobs:
         uses: actions/checkout@v3
       - name: Build an image from Dockerfile
         run: |
-          export IMAGE=perconalab/percona-postgresql-operator:${{ github.sha }}
+          export IMAGE=ssk199441/agora-postgresql-operator:${{ github.sha }}
           export DOCKER_PUSH=0
           export DOCKER_SQUASH=0
           ./e2e-tests/build
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.10.0
         with:
-          image-ref: 'docker.io/perconalab/percona-postgresql-operator:${{ github.sha }}'
+          image-ref: 'docker.io/ssk199441/agora-postgresql-operator:${{ github.sha }}'
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true

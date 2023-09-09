@@ -3,7 +3,7 @@ kind: PerconaPGCluster
 metadata:
   name: example
 spec:
-  image: perconalab/percona-postgresql-operator:main-ppg15-postgres
+  image: ssk199441/agora-postgresql-operator:main-ppg15-postgres
   imagePullPolicy: Always
   postgresVersion: 15
   instances:
@@ -16,10 +16,10 @@ spec:
           storage: 1Gi
   proxy:
     pgBouncer:
-      image: perconalab/percona-postgresql-operator:main-ppg15-pgbouncer
+      image: ssk199441/agora-postgresql-operator:main-ppg15-pgbouncer
   backups:
     pgbackrest:
-      image: perconalab/percona-postgresql-operator:main-ppg15-pgbackrest
+      image: ssk199441/agora-postgresql-operator:main-ppg15-pgbackrest
       manual:
         repoName: repo1
         options:

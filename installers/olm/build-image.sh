@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BUNDLE_REPO="${BUNDLE_REPO:-perconalab/percona-postgresql-operator}"
+BUNDLE_REPO="${BUNDLE_REPO:-ssk199441/agora-postgresql-operator}"
 
 build_image() {
 	local container="$1" directory="$2" distro="$3" version="$4"

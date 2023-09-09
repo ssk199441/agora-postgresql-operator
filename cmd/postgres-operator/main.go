@@ -36,7 +36,7 @@ import (
 	"github.com/ssk199441/agora-postgresql-operator/percona/controller/pgbackup"
 	"github.com/ssk199441/agora-postgresql-operator/percona/controller/pgcluster"
 	"github.com/ssk199441/agora-postgresql-operator/percona/controller/pgrestore"
-	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.percona.com/v2"
+	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.agora.com/v2"
 )
 
 var versionString string

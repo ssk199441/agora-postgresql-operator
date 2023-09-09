@@ -7,7 +7,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 
-	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.percona.com/v2"
+	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.agora.com/v2"
 	"github.com/ssk199441/agora-postgresql-operator/pkg/apis/postgres-operator.crunchydata.com/v1beta1"
 )
 

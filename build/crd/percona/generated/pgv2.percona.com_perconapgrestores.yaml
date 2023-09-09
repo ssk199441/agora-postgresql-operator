@@ -5,9 +5,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.10.0
   creationTimestamp: null
-  name: perconapgrestores.pgv2.percona.com
+  name: perconapgrestores.pgv2.agora.com
 spec:
-  group: pgv2.percona.com
+  group: pgv2.agora.com
   names:
     kind: PerconaPGRestore
     listKind: PerconaPGRestoreList

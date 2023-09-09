@@ -11,7 +11,7 @@ import (
 
 	"github.com/ssk199441/agora-postgresql-operator/percona/version/service/client"
 	"github.com/ssk199441/agora-postgresql-operator/percona/version/service/client/version_service"
-	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.percona.com/v2"
+	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.agora.com/v2"
 )
 
 type DepVersion struct{}

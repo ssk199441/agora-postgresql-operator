@@ -31,7 +31,7 @@ import (
 	"github.com/ssk199441/agora-postgresql-operator/internal/naming"
 	"github.com/ssk199441/agora-postgresql-operator/percona/k8s"
 	"github.com/ssk199441/agora-postgresql-operator/percona/pmm"
-	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.percona.com/v2"
+	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.agora.com/v2"
 	"github.com/ssk199441/agora-postgresql-operator/pkg/apis/postgres-operator.crunchydata.com/v1beta1"
 )
 
@@ -98,8 +98,8 @@ func (r *PGClusterReconciler) watchSecrets() handler.Funcs {
 	}
 }
 
-// +kubebuilder:rbac:groups=pgv2.percona.com,resources=perconapgclusters,verbs=get;list;watch
-// +kubebuilder:rbac:groups=pgv2.percona.com,resources=perconapgclusters/status,verbs=patch;update
+// +kubebuilder:rbac:groups=pgv2.agora.com,resources=perconapgclusters,verbs=get;list;watch
+// +kubebuilder:rbac:groups=pgv2.agora.com,resources=perconapgclusters/status,verbs=patch;update
 // +kubebuilder:rbac:groups=postgres-operator.crunchydata.com,resources=postgresclusters,verbs=get;list;create;update;patch;delete;watch
 // +kubebuilder:rbac:groups=apps,resources=replicasets,verbs=create;delete;get;list;patch;watch
 

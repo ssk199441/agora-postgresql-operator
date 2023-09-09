@@ -571,14 +571,14 @@ type PerconaPGClusterList struct {
 	Items           []PerconaPGCluster `json:"items"`
 }
 
-const labelPrefix = "pgv2.percona.com/"
+const labelPrefix = "pgv2.agora.com/"
 
 const (
 	LabelOperatorVersion = labelPrefix + "version"
 	LabelPMMSecret       = labelPrefix + "pmm-secret"
 )
 
-const annotationPrefix = "pgv2.percona.com/"
+const annotationPrefix = "pgv2.agora.com/"
 
 const (
 	// PGBackRestBackup is the annotation that is added to a PerconaPGCluster to initiate a manual

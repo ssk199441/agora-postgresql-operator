@@ -18,7 +18,7 @@ import (
 	"github.com/ssk199441/agora-postgresql-operator/internal/logging"
 	"github.com/ssk199441/agora-postgresql-operator/internal/naming"
 	"github.com/ssk199441/agora-postgresql-operator/percona/controller"
-	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.percona.com/v2"
+	v2 "github.com/ssk199441/agora-postgresql-operator/pkg/apis/pgv2.agora.com/v2"
 )
 
 const (
@@ -41,9 +41,9 @@ func (r *PGBackupReconciler) SetupWithManager(mgr manager.Manager) error {
 	return builder.ControllerManagedBy(mgr).For(&v2.PerconaPGBackup{}).Complete(r)
 }
 
-// +kubebuilder:rbac:groups=pgv2.percona.com,resources=perconapgbackups,verbs=get;list;watch
-// +kubebuilder:rbac:groups=pgv2.percona.com,resources=perconapgbackups/status,verbs=patch;update
-// +kubebuilder:rbac:groups=pgv2.percona.com,resources=perconapgclusters,verbs=get;list;create;update;patch;watch
+// +kubebuilder:rbac:groups=pgv2.agora.com,resources=perconapgbackups,verbs=get;list;watch
+// +kubebuilder:rbac:groups=pgv2.agora.com,resources=perconapgbackups/status,verbs=patch;update
+// +kubebuilder:rbac:groups=pgv2.agora.com,resources=perconapgclusters,verbs=get;list;create;update;patch;watch
 // +kubebuilder:rbac:groups=postgres-operator.crunchydata.com,resources=postgresclusters,verbs=get;list;create;update;patch;watch
 // +kubebuilder:rbac:groups=batch,resources=jobs,verbs=get;list;watch
 
